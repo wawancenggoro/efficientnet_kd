@@ -23,8 +23,8 @@ def hms_string(sec_elapsed):
     s = sec_elapsed % 60.
     return "{}:{:>02}:{:>05.2f}".format(h, m, s)
 
-modelname = 'b0'
-teacherModelName = 'b1'
+modelname = 'b0' #student model, option: b0, b1, b2, b3, b4, b5, b6
+teacherModelName = 'b1' # b1, b2, b3, b4, b5, b6, b7
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
 use_parallel = False
